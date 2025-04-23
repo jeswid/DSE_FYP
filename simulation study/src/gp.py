@@ -2,12 +2,12 @@ import jax.numpy as jnp
 import jax.nn as nn
 import numpyro
 import numpyro.distributions as dist
-from pyprojroot2 import here
+from pyprojroot import here
 import sys
 from numpyro.handlers import condition
 # Add code src directory to sys.path
 sys.path.append(str(here() / "simulation study" / "src"))
-from utils.kernels import M_g, exp_sq_kernel
+from kernels import M_g, exp_sq_kernel
 
 def gp_aggr(config=None):
     """
