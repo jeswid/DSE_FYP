@@ -2,7 +2,7 @@ import numpy as np
 import geopandas as gpd
 from pyprojroot import here
 
-def load_data(data_path = here() / "data" / "processed"):
+def load_data(data_path = here() "data"):
     """
     Load all necessary data for the model
     

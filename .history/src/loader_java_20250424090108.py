@@ -2,7 +2,7 @@ import numpy as np
 import geopandas as gpd
 from pyprojroot import here
 
-def load_data(data_path = here() / "data" / "processed"):
+def load_data(data_path = here() / "data"):
     """
     Load all necessary data for the model
     
@@ -10,15 +10,15 @@ def load_data(data_path = here() / "data" / "processed"):
         Dictionary containing loaded data
     """
     # Load grid points coordinates
-    x = np.load(data_path / "lat_lon_x_jkt.npy")
+    x = np.load(data_path / "lat_lon_x_java.npy")
     
     # Load regional data
-    pol_pts_lo = np.load(data_path / "pol_pts_jkt_lo.npy")
-    pol_pts_hi = np.load(data_path / "pol_pts_jkt_hi.npy")
+    pol_pts_lo = np.load(data_path / "pol_pts_java_lo.npy")
+    pol_pts_hi = np.load(data_path / "pol_pts_java_hi.npy")
     
     # Load shapefiles
-    df_lo = gpd.read_file(data_path / "jkt_prov.shp")
-    df_hi = gpd.read_file(data_path / "jkt_dist.shp")
+    df_lo = gpd.read_file(data_path / "java_prov.shp")
+    df_hi = gpd.read_file(data_path / "java_dist.shp")
     
     # Create the M matrices for aggregation
     # This function would need to be implemented based on how the original notebook creates these matrices
