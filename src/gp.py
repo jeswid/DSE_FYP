@@ -6,7 +6,7 @@ from pyprojroot import here
 import sys
 from numpyro.handlers import condition
 # Add code src directory to sys.path
-sys.path.append(str(here() / "simulation study" / "src"))
+sys.path.append(str(here() / "src"))
 from kernels import M_g, exp_sq_kernel
 
 def gp_aggr(config=None):
@@ -44,6 +44,7 @@ def gp_aggr(config=None):
     kernel_length = numpyro.sample("kernel_length", kernel_length_prior)
     kernel_var = numpyro.sample("kernel_var", kernel_var_prior)
     log_mean = numpyro.sample("log_mean", dist.Normal(jnp.log(20), 0.1))
+    
     # Create kernel with smaller variance
     k = gp_kernel(x, x, kernel_var, kernel_length, noise, jitter)
     
