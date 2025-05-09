@@ -10,7 +10,7 @@ This project is the Final Year Project (FYP) for the Data Science and Economics 
 ## Methodology
 - Implemented aggVAE and aggGP models based on Semenova et al. (2022, 2023) within a Bayesian Hierarchical framework.
 - Compared these models against traditional baselines: random forests, population-proportional splitting, and equal splitting.
-- Tuned model hyperparameters, evaluated convergence (e.g., improved \(\hat{R}\)), and conducted robustness checks.
+- Tuned model hyperparameters, evaluated convergence (e.g., improved R-statistics, and conducted robustness checks.
 - Incorporated geospatial covariates including built-up area, road density, nightlights, population density, and HDI.
 - Assessed predictive accuracy of case counts and prevalence, as well as preservation of district-to-province prevalence ratios.
 
